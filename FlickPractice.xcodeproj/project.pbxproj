@@ -1,0 +1,458 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		146EA8EC136E8E6800B05224 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 146EA8EB136E8E6800B05224 /* UIKit.framework */; };
+		146EA8EE136E8E6800B05224 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 146EA8ED136E8E6800B05224 /* Foundation.framework */; };
+		146EA8F0136E8E6800B05224 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 146EA8EF136E8E6800B05224 /* CoreGraphics.framework */; };
+		146EA8F6136E8E6800B05224 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 146EA8F4136E8E6800B05224 /* InfoPlist.strings */; };
+		146EA8F9136E8E6800B05224 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 146EA8F8136E8E6800B05224 /* main.m */; };
+		146EA8FC136E8E6800B05224 /* FlickPracticeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 146EA8FB136E8E6800B05224 /* FlickPracticeAppDelegate.m */; };
+		146EA8FF136E8E6800B05224 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 146EA8FD136E8E6800B05224 /* MainWindow.xib */; };
+		146EA902136E8E6800B05224 /* FlickPracticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 146EA901136E8E6800B05224 /* FlickPracticeViewController.m */; };
+		146EA905136E8E6800B05224 /* FlickPracticeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 146EA903136E8E6800B05224 /* FlickPracticeViewController.xib */; };
+		146EA90C136E8E6800B05224 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 146EA8EB136E8E6800B05224 /* UIKit.framework */; };
+		146EA90D136E8E6800B05224 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 146EA8ED136E8E6800B05224 /* Foundation.framework */; };
+		146EA90E136E8E6800B05224 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 146EA8EF136E8E6800B05224 /* CoreGraphics.framework */; };
+		146EA916136E8E6800B05224 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 146EA914136E8E6800B05224 /* InfoPlist.strings */; };
+		146EA919136E8E6800B05224 /* FlickPracticeTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 146EA918136E8E6800B05224 /* FlickPracticeTests.h */; };
+		146EA91B136E8E6800B05224 /* FlickPracticeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 146EA91A136E8E6800B05224 /* FlickPracticeTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		146EA90F136E8E6800B05224 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146EA8DE136E8E6800B05224 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 146EA8E6136E8E6800B05224;
+			remoteInfo = FlickPractice;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		146EA8E7136E8E6800B05224 /* FlickPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		146EA8EB136E8E6800B05224 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		146EA8ED136E8E6800B05224 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		146EA8EF136E8E6800B05224 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		146EA8F3136E8E6800B05224 /* FlickPractice-Info.plist */ = {isa = PBXFileReference; path = "FlickPractice-Info.plist"; sourceTree = "<group>"; };
+		146EA8F5136E8E6800B05224 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		146EA8F7136E8E6800B05224 /* FlickPractice-Prefix.pch */ = {isa = PBXFileReference; path = "FlickPractice-Prefix.pch"; sourceTree = "<group>"; };
+		146EA8F8136E8E6800B05224 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		146EA8FA136E8E6800B05224 /* FlickPracticeAppDelegate.h */ = {isa = PBXFileReference; path = FlickPracticeAppDelegate.h; sourceTree = "<group>"; };
+		146EA8FB136E8E6800B05224 /* FlickPracticeAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlickPracticeAppDelegate.m; sourceTree = "<group>"; };
+		146EA8FE136E8E6800B05224 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		146EA900136E8E6800B05224 /* FlickPracticeViewController.h */ = {isa = PBXFileReference; path = FlickPracticeViewController.h; sourceTree = "<group>"; };
+		146EA901136E8E6800B05224 /* FlickPracticeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlickPracticeViewController.m; sourceTree = "<group>"; };
+		146EA904136E8E6800B05224 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FlickPracticeViewController.xib; sourceTree = "<group>"; };
+		146EA90B136E8E6800B05224 /* FlickPracticeTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickPracticeTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		146EA913136E8E6800B05224 /* FlickPracticeTests-Info.plist */ = {isa = PBXFileReference; path = "FlickPracticeTests-Info.plist"; sourceTree = "<group>"; };
+		146EA915136E8E6800B05224 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		146EA917136E8E6800B05224 /* FlickPracticeTests-Prefix.pch */ = {isa = PBXFileReference; path = "FlickPracticeTests-Prefix.pch"; sourceTree = "<group>"; };
+		146EA918136E8E6800B05224 /* FlickPracticeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlickPracticeTests.h; sourceTree = "<group>"; };
+		146EA91A136E8E6800B05224 /* FlickPracticeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlickPracticeTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		146EA8E4136E8E6800B05224 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				146EA8EC136E8E6800B05224 /* UIKit.framework in Frameworks */,
+				146EA8EE136E8E6800B05224 /* Foundation.framework in Frameworks */,
+				146EA8F0136E8E6800B05224 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		146EA907136E8E6800B05224 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				146EA90C136E8E6800B05224 /* UIKit.framework in Frameworks */,
+				146EA90D136E8E6800B05224 /* Foundation.framework in Frameworks */,
+				146EA90E136E8E6800B05224 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		146EA8DC136E8E6800B05224 = {
+			isa = PBXGroup;
+			children = (
+				146EA8F1136E8E6800B05224 /* FlickPractice */,
+				146EA911136E8E6800B05224 /* FlickPracticeTests */,
+				146EA8EA136E8E6800B05224 /* Frameworks */,
+				146EA8E8136E8E6800B05224 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		146EA8E8136E8E6800B05224 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				146EA8E7136E8E6800B05224 /* FlickPractice.app */,
+				146EA90B136E8E6800B05224 /* FlickPracticeTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		146EA8EA136E8E6800B05224 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				146EA8EB136E8E6800B05224 /* UIKit.framework */,
+				146EA8ED136E8E6800B05224 /* Foundation.framework */,
+				146EA8EF136E8E6800B05224 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		146EA8F1136E8E6800B05224 /* FlickPractice */ = {
+			isa = PBXGroup;
+			children = (
+				146EA8FA136E8E6800B05224 /* FlickPracticeAppDelegate.h */,
+				146EA8FB136E8E6800B05224 /* FlickPracticeAppDelegate.m */,
+				146EA8FD136E8E6800B05224 /* MainWindow.xib */,
+				146EA900136E8E6800B05224 /* FlickPracticeViewController.h */,
+				146EA901136E8E6800B05224 /* FlickPracticeViewController.m */,
+				146EA903136E8E6800B05224 /* FlickPracticeViewController.xib */,
+				146EA8F2136E8E6800B05224 /* Supporting Files */,
+			);
+			path = FlickPractice;
+			sourceTree = "<group>";
+		};
+		146EA8F2136E8E6800B05224 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				146EA8F3136E8E6800B05224 /* FlickPractice-Info.plist */,
+				146EA8F4136E8E6800B05224 /* InfoPlist.strings */,
+				146EA8F7136E8E6800B05224 /* FlickPractice-Prefix.pch */,
+				146EA8F8136E8E6800B05224 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		146EA911136E8E6800B05224 /* FlickPracticeTests */ = {
+			isa = PBXGroup;
+			children = (
+				146EA918136E8E6800B05224 /* FlickPracticeTests.h */,
+				146EA91A136E8E6800B05224 /* FlickPracticeTests.m */,
+				146EA912136E8E6800B05224 /* Supporting Files */,
+			);
+			path = FlickPracticeTests;
+			sourceTree = "<group>";
+		};
+		146EA912136E8E6800B05224 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				146EA913136E8E6800B05224 /* FlickPracticeTests-Info.plist */,
+				146EA914136E8E6800B05224 /* InfoPlist.strings */,
+				146EA917136E8E6800B05224 /* FlickPracticeTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		146EA8E6136E8E6800B05224 /* FlickPractice */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 146EA91E136E8E6800B05224 /* Build configuration list for PBXNativeTarget "FlickPractice" */;
+			buildPhases = (
+				146EA8E3136E8E6800B05224 /* Sources */,
+				146EA8E4136E8E6800B05224 /* Frameworks */,
+				146EA8E5136E8E6800B05224 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlickPractice;
+			productName = FlickPractice;
+			productReference = 146EA8E7136E8E6800B05224 /* FlickPractice.app */;
+			productType = "com.apple.product-type.application";
+		};
+		146EA90A136E8E6800B05224 /* FlickPracticeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 146EA921136E8E6800B05224 /* Build configuration list for PBXNativeTarget "FlickPracticeTests" */;
+			buildPhases = (
+				146EA906136E8E6800B05224 /* Sources */,
+				146EA907136E8E6800B05224 /* Frameworks */,
+				146EA908136E8E6800B05224 /* Resources */,
+				146EA909136E8E6800B05224 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				146EA910136E8E6800B05224 /* PBXTargetDependency */,
+			);
+			name = FlickPracticeTests;
+			productName = FlickPracticeTests;
+			productReference = 146EA90B136E8E6800B05224 /* FlickPracticeTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		146EA8DE136E8E6800B05224 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 146EA8E1136E8E6800B05224 /* Build configuration list for PBXProject "FlickPractice" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 146EA8DC136E8E6800B05224;
+			productRefGroup = 146EA8E8136E8E6800B05224 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				146EA8E6136E8E6800B05224 /* FlickPractice */,
+				146EA90A136E8E6800B05224 /* FlickPracticeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		146EA8E5136E8E6800B05224 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				146EA8F6136E8E6800B05224 /* InfoPlist.strings in Resources */,
+				146EA8FF136E8E6800B05224 /* MainWindow.xib in Resources */,
+				146EA905136E8E6800B05224 /* FlickPracticeViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		146EA908136E8E6800B05224 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				146EA916136E8E6800B05224 /* InfoPlist.strings in Resources */,
+				146EA919136E8E6800B05224 /* FlickPracticeTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		146EA909136E8E6800B05224 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		146EA8E3136E8E6800B05224 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				146EA8F9136E8E6800B05224 /* main.m in Sources */,
+				146EA8FC136E8E6800B05224 /* FlickPracticeAppDelegate.m in Sources */,
+				146EA902136E8E6800B05224 /* FlickPracticeViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		146EA906136E8E6800B05224 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				146EA91B136E8E6800B05224 /* FlickPracticeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		146EA910136E8E6800B05224 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 146EA8E6136E8E6800B05224 /* FlickPractice */;
+			targetProxy = 146EA90F136E8E6800B05224 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		146EA8F4136E8E6800B05224 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				146EA8F5136E8E6800B05224 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		146EA8FD136E8E6800B05224 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				146EA8FE136E8E6800B05224 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		146EA903136E8E6800B05224 /* FlickPracticeViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				146EA904136E8E6800B05224 /* en */,
+			);
+			name = FlickPracticeViewController.xib;
+			sourceTree = "<group>";
+		};
+		146EA914136E8E6800B05224 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				146EA915136E8E6800B05224 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		146EA91C136E8E6800B05224 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		146EA91D136E8E6800B05224 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		146EA91F136E8E6800B05224 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FlickPractice/FlickPractice-Prefix.pch";
+				INFOPLIST_FILE = "FlickPractice/FlickPractice-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		146EA920136E8E6800B05224 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FlickPractice/FlickPractice-Prefix.pch";
+				INFOPLIST_FILE = "FlickPractice/FlickPractice-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		146EA922136E8E6800B05224 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FlickPractice.app/FlickPractice";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FlickPracticeTests/FlickPracticeTests-Prefix.pch";
+				INFOPLIST_FILE = "FlickPracticeTests/FlickPracticeTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		146EA923136E8E6800B05224 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FlickPractice.app/FlickPractice";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FlickPracticeTests/FlickPracticeTests-Prefix.pch";
+				INFOPLIST_FILE = "FlickPracticeTests/FlickPracticeTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		146EA8E1136E8E6800B05224 /* Build configuration list for PBXProject "FlickPractice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				146EA91C136E8E6800B05224 /* Debug */,
+				146EA91D136E8E6800B05224 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		146EA91E136E8E6800B05224 /* Build configuration list for PBXNativeTarget "FlickPractice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				146EA91F136E8E6800B05224 /* Debug */,
+				146EA920136E8E6800B05224 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		146EA921136E8E6800B05224 /* Build configuration list for PBXNativeTarget "FlickPracticeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				146EA922136E8E6800B05224 /* Debug */,
+				146EA923136E8E6800B05224 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 146EA8DE136E8E6800B05224 /* Project object */;
+}
