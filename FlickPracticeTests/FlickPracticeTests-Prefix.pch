@@ -1,7 +1,0 @@
-//
-// Prefix header for all source files of the 'FlickPracticeTests' target in the 'FlickPracticeTests' project
-//
-
-#ifdef __OBJC__
-    #import <UIKit/UIKit.h>
-#endif
