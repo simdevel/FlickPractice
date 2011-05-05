@@ -15,7 +15,7 @@
     NSMutableArray *results = [NSMutableArray arrayWithArray:self];
 	int i = [results count];
 	while (--i) {
-		int j = rand() % (i + 1);
+		int j = arc4random() % (i + 1);
 		[results exchangeObjectAtIndex:i withObjectAtIndex:j];
 	}
 	return [NSArray arrayWithArray:results];

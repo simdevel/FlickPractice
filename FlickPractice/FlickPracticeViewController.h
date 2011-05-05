@@ -11,5 +11,6 @@
 @interface FlickPracticeViewController : UIViewController {
     
 }
-
+- (IBAction)presentGameView:(id)sender;
+- (IBAction)presentRecordsView:(id)sender;
 @end

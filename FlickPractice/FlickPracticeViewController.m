@@ -7,6 +7,7 @@
 //
 
 #import "FlickPracticeViewController.h"
+#import "TextInputGameViewController.h"
 
 @implementation FlickPracticeViewController
 
@@ -23,15 +24,39 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
+#pragma mark - delegate methods
+- (void)presentStartViewController 
+{
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+#pragma mark - Interface Builder Actions
+- (IBAction)presentGameView:(id)sender
+{
+    TextInputGameViewController *controller = [[TextInputGameViewController alloc] initWithNibName:@"TextInputGameViewController" bundle:nil];
+    [self presentModalViewController:controller animated:YES];
+    [controller release];
+}
+
+- (IBAction)presentRecordsView:(id)sender
+{
+    
+}
+
 #pragma mark - View lifecycle
 
-/*
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    /*
+    UIImage *bkImage = [UIImage imageNamed:@"keyboard.jpg"];
+    //[[UIImage alloc] initWithContentsOfFile:@"keyboard.png"];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:bkImage];
+    [bkImage release];
+     */
 }
-*/
 
 - (void)viewDidUnload
 {

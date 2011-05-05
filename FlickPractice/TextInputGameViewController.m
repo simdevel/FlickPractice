@@ -2,7 +2,7 @@
 //  TextInputGameViewController.m
 //  FlickPractice
 //
-//  Created by TsubasaNagasawa on 11/05/03.
+//  Created by Simdevel on 11/05/03.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
@@ -10,11 +10,16 @@
 
 #import "NSArray+Randomoized.h"
 #import "TwitterConnector.h"
+#import "EndingGameViewController.h"
+
+static NSArray *themeData;
+static NSInteger complateCount;
+static NSInteger currentIndex;
 
 @interface TextInputGameViewController(Private)
--(NSArray *)loadThemeData:(NSString *)datasourceType;
--(void)changeThemeLabel;
--(void)changeCountLabel;
+- (NSArray *)loadThemeData:(NSString *)datasourceType;
+- (void)changeLabels;
+- (BOOL)isComplate;
 @end
 
 @implementation TextInputGameViewController
@@ -22,66 +27,39 @@
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 
- - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
- self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-     printf("hoge");
- if (self) {
- // Custom initialization.
- }
+/*
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization.
+    }
  return self;
- }
-
-
-
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad {
-    printf("hoge");
-    [super viewDidLoad];
-	//Load Data
-	//themeData = [[NSArray alloc] initWithArray:[self loadThemeData:@"guideLine"]];
-	themeData = [[NSArray alloc] initWithArray:[self loadThemeData:@"tweet"]];
-	[self changeThemeLabel];
 }
-
-- (void)viewDidAppear:(BOOL)animated {
-    printf("aaaaa");
-    /*
-	[super viewDidAppear:YES];
-	toolBarLabel.text = [NSString stringWithFormat:@"0 / %d", CLEAR_COUNT];
-	//キーボードを表示
-	[inputTextField becomeFirstResponder];
-     */
-}
-
-- (IBAction) checkInputTextWhenChangeTextField:(UITextField *)sender {
-    if ([sender.text isEqualToString:themeLabel.text]) {
-		printf("OKOK");
-		sender.text = @""; 
-		[self changeThemeLabel];
-	}
-}
-
-- (void)changeThemeLabel {
-    //self.themeLabel.text = [[themeData randomizedArray] objectAtIndex:0];
-}
-
-- (void)changeCountLabel {
-    //    self.toolBarLabel.text = [NSString stringWithFormat:@"", ];
-}
+*/
 
 - (NSArray *)loadThemeData:(NSString *)datasourceType {
-    static NSArray *ret;
-	if (ret == nil) {
-	    NSString *hashTag = @"flikerapptheme";
-		if ([datasourceType isEqualToString:@"guideLine"]) {
-			ret = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"guideLine" ofType:@"plist"]];
-		} else if ([datasourceType isEqualToString:@"tweet"]) {
-			ret = [TwitterConnector getHashTagDataAtGlobal:hashTag];
-		}
-	}
-	return ret;
+    NSArray *ret;
+	if ([datasourceType isEqualToString:@"plist"]) {
+		ret = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"themeStringFile" ofType:@"plist"]];
+	} else if ([datasourceType isEqualToString:@"tweet"]) {
+        NSString *hashTag = @"flickpracticetheme";
+        ret = [NSArray arrayWithArray:[TwitterConnector getHashTagDataAtGlobal:hashTag]];
+    }
+	return [ret randomizedArray];
 }
 
+- (void)changeLabels {
+    NSDictionary *dic = [themeData objectAtIndex:currentIndex];
+    themeLabel.text = [dic objectForKey:@"text"];
+    userNameLabel.text = [dic objectForKey:@"user_name"];
+    scoreLabel.text = [NSString stringWithFormat:@"%d %s %d",currentIndex + 1, SCORE_SEPARATOR, complateCount];
+    displayInputLabel.text = @"";
+}
+
+- (BOOL)isComplate {
+    //return YES;
+    return (currentIndex + 1 > complateCount);
+}
 /*
  // Override to allow orientations other than the default portrait orientation.
  - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -89,6 +67,55 @@
  return (interfaceOrientation == UIInterfaceOrientationPortrait);
  }
  */
+
+#pragma mark - Interface Builder Actions
+
+- (IBAction) checkInputTextWhenChangeTextField:(UITextField *)sender {
+    
+    displayInputLabel.text = sender.text;
+    if ([sender.text isEqualToString:themeLabel.text]) {
+        //sender.text = @"";
+        [sender resignFirstResponder];
+        [sender becomeFirstResponder];
+        if ([self isComplate]) {
+            [self resignFirstResponder];
+            EndingGameViewController *conttoller = [[EndingGameViewController alloc] initWithNibName:@"EndingGameViewController" bundle:nil];
+            [self presentModalViewController:conttoller animated:YES];
+            [conttoller release];
+        }
+	}
+}
+
+- (IBAction)changeLabelsTextWhenEndEditingTextField:(UITextField *)sender
+{
+    ++currentIndex;
+    if (![self isComplate]) {
+        sender.text = @"";
+        [self changeLabels];
+    }
+}
+
+#pragma mark - View lifecycle
+
+// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+- (void)viewDidLoad {
+    [super viewDidLoad];
+	
+    //Load data
+	themeData = [[NSArray alloc] initWithArray:[self loadThemeData:@"tweet"]];
+    
+    //Initalize counters
+    currentIndex = 0;
+    complateCount = ([themeData count] < EXERCISE_COUNT) ? [themeData count] : EXERCISE_COUNT;
+	
+    [self changeLabels];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+	[super viewDidAppear:YES];
+	//show keyboard
+	[inputTextField becomeFirstResponder];
+}
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
